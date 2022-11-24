@@ -1,21 +1,8 @@
-.test-button {
-  width: 300px;
-  height: 100px;
-  font-size: 30px;
-}
-
 .app-container {
-  background-image: url(./img//backGroundImage.jpg);
-  object-fit: cover;
   height: 100vh;
-  width: auto;
-  background-repeat: no-repeat;
-  background-size: cover;
+  width: 100vw;
+  border: 2px solid blue;
   display: flex;
-  align-items: center;
   justify-content: center;
-}
-
-.weatherBox {
-  border: 2px solid red;
+  align-items: center;
 }

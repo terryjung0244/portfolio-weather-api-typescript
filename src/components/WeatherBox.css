@@ -1,0 +1,9 @@
+.weather-box {
+  border: 2px solid red;
+  width: 500px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
