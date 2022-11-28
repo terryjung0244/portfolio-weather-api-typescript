@@ -8,7 +8,9 @@ import { WeatherRequestType } from './weatherAction.interface';
 const { WEATHER_REQUEST_ACTION_CONST_STRING } = WEATHER_CONST_STRING;
 
 function* weatherApiDataFromSaga(action: WeatherRequestType): any {
-  const result: weatherModel | Error = yield getWeatherCurrentLocationByAxios(action.payload);
+  const result: weatherModel | Error = yield getWeatherCurrentLocationByAxios(
+    action.payload,
+  );
   // eslint-disable-next-line no-prototype-builtins
   if (result.hasOwnProperty('main')) {
     yield put(getWeatherApiSuccessAction(result as weatherModel));

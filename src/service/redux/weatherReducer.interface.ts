@@ -1,5 +1,5 @@
 export interface WeatherStateType {
   loading: boolean;
-  error: null;
+  error: Error | null;
   result: null;
 }

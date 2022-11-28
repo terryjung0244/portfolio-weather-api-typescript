@@ -11,7 +11,10 @@ const {
 
 const initialState = { loading: false, error: null, result: null };
 
-const weatherReducer: Reducer<WeatherStateType, WeatherActionsType> = (state = initialState, action: any) => {
+const weatherReducer: Reducer<WeatherStateType, WeatherActionsType> = (
+  state = initialState,
+  action: any,
+) => {
   switch (action.type) {
     case WEATHER_REQUEST_ACTION_CONST_STRING:
       return {
