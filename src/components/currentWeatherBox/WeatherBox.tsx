@@ -1,7 +1,7 @@
 import React from 'react';
-import { WeatherBoxPropsType } from '../type/general/general';
 import './WeatherBox.css';
-import DateTime from './DateTime';
+import DateTime from '../DateTime';
+import { WeatherBoxPropsType } from './WeatherBox.interface';
 
 const WeatherBox = ({ result }: WeatherBoxPropsType) => {
   return (

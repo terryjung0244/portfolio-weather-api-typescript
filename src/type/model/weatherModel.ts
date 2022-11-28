@@ -1,4 +1,8 @@
-import { MainFromResponse, WeatherResponse, WindFromResponse } from '../response/weatherResponse';
+import {
+  MainFromResponse,
+  WeatherResponse,
+  WindFromResponse,
+} from '../response/weatherResponse';
 
 export interface weatherModel {
   main: MainFromResponse;

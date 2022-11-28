@@ -1,13 +1,16 @@
 import React, { useEffect, useState } from 'react';
 import Loading from './components/Loading';
-import WeatherBox from './components/WeatherBox';
+import WeatherBox from './components/currentWeatherBox/WeatherBox';
 import { useAppDispatch } from './hook/useAppDispatch';
 import useAppSelector from './hook/useAppSelector';
 import { getWeatherApiRequestAction } from './service/redux/weatherAction';
 import { weatherModel } from './type/model/weatherModel';
 import './App.css';
-import Input from './components/reusable/Input';
-import { InputStateType, OnChangeParamType } from './components/reusable/input.interface';
+import Input from './components/reusable/input/Input';
+import {
+  InputStateType,
+  OnChangeParamType,
+} from './components/reusable/input/input.interface';
 
 const App = () => {
   const [input, setInput] = useState<InputStateType>({

@@ -1,6 +1,6 @@
 import React from 'react';
 import { InputCompPropsType } from './input.interface';
-import * as Styled from '../reusable/Style.Input';
+import * as Styled from './Style.Input';
 
 const Input = ({
   name,
