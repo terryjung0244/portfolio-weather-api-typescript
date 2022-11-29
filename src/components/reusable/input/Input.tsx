@@ -3,6 +3,7 @@ import { InputCompPropsType } from './input.interface';
 import * as Styled from './Style.Input';
 
 const Input = ({
+  dataTestId,
   name,
   value,
   onChangeFunc,
@@ -12,6 +13,7 @@ const Input = ({
 }: InputCompPropsType) => {
   return (
     <Styled.InputStyle
+      data-testid={dataTestId}
       name={name}
       value={value}
       onChange={(e: React.ChangeEvent<HTMLInputElement>) =>

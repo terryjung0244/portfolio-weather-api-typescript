@@ -13,6 +13,8 @@ import {
 } from './components/reusable/input/input.interface';
 
 const App = () => {
+  // const [inputState, setInputState] = useState<string>('');
+
   const [input, setInput] = useState<InputStateType>({
     input: '',
   });
@@ -40,7 +42,7 @@ const App = () => {
 
   if (loading) {
     return (
-      <div>
+      <div data-testid="loading-component">
         <Loading />
       </div>
     );
@@ -49,6 +51,10 @@ const App = () => {
   if (error) {
     return <div>{error.message}</div>;
   }
+
+  // const onChangeFunc2 = (e: React.ChangeEvent<HTMLInputElement>) => {
+  //   setInputState(e.target.value);
+  // };
 
   return (
     <div className="app-container">
@@ -59,6 +65,7 @@ const App = () => {
       )}
       <div>
         <Input
+          dataTestId="input-component"
           name={'input'}
           value={input['input']}
           onChangeFunc={onChangeFunc}
@@ -67,6 +74,7 @@ const App = () => {
           height={'50px'}
         />
       </div>
+      {/* <input name={'inputName'} value={inputState} onChange={onChangeFunc2} /> */}
     </div>
   );
 };
