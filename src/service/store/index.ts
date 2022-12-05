@@ -9,6 +9,7 @@ const sagaMiddleware = createSagaMiddleware();
 function* rootSaga() {
   yield all([
     // validSagaWatcher()
+    // test
     weatherSagaWatcher(),
   ]);
 }
@@ -19,7 +20,8 @@ export const createStore = () =>
       // validReducer
       weatherReducer,
     },
-    middleware: (getDefaultMiddleware) => getDefaultMiddleware({ serializableCheck: false }).concat(sagaMiddleware),
+    middleware: (getDefaultMiddleware) =>
+      getDefaultMiddleware({ serializableCheck: false }).concat(sagaMiddleware),
   });
 
 export const store = createStore();
