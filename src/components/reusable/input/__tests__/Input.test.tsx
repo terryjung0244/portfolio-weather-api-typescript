@@ -7,7 +7,7 @@ const renderComponent = (props: InputCompPropsType) => render(<Input {...props} 
 
 describe('src/components/reusable/input', () => {
   let props: InputCompPropsType;
-  const mockOnChangeFunc = jest.fn();
+  const mockOnChangeFunc = jest.fn(); //resuable function
 
   beforeEach(() => {
     props = {
